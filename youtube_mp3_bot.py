@@ -39,6 +39,7 @@ async def process_youtube_link(update: Update, context: ContextTypes.DEFAULT_TYP
             # ഫയൽ നെയിം ലളിതമാക്കാനുള്ള ഓപ്ഷൻ
             'outtmpl': '%(title)s.%(ext)s',
             'restrictfilenames': True,
+            'cookiefile': 'cookies.txt',
         }
         
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
@@ -81,4 +82,5 @@ if __name__ == '__main__':
     application.add_handler(youtube_link_handler)
     
     # ബോട്ട് പ്രവർത്തിപ്പിക്കുക
+
     application.run_polling()

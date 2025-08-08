@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 # ffmpeg ഇൻസ്റ്റാൾ ചെയ്യുന്നു
 apt-get update
+
 apt-get install -y ffmpeg
